@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Bebas Neue', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+header {
+    background-color: #121212;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+}
+
+nav .nav-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav .nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 30px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    transition: ease .3s;
+}
+
+.item a:hover {
+    color: #b4b4b4;
+    font-weight: bold;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo figcaption {
+    margin-top: 7px;
+    font-size: 1.7em;
+    color: #fff;
+    text-align: center;
+}
+
+.logo a img {
+    height: 150px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 20px 20px;
+}
+
+.thumbnail {
+    width: 48%;
+    height: auto;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .7rem;
+}
+
+.thumbnail .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(225, 225, 225, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: .7rem;
+}
+
+.thumbnail:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h2 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #2b2b2b;
+}
+
+.overlay p {
+    margin: 5px 0 0;
+    font-size: 1.4em;
+    color: #2b2b2b;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 4rem 10%;
+}
+
+.footer-text {
+    font-size: 1.6rem;
+}
+
+.footer-icontop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transition: .5s ease;
+    
+}
+
+.footer-icontop a:hover {
+    box-shadow: 0 0 1rem white;
+    color: rgb(83, 83, 83);
+    transform: scale(1.08);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+    background: transparent;
+    font-size: 2rem;
+    color: white;
+    margin: .6rem 1rem 3rem 0; 
+    transition: .5s ease;
+}
+
+.social-icons a:hover, .social-icons-head a:hover {
+    color: rgb(172, 172, 172);
+}
+
+.social-icons-head a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    text-decoration: none;
+    background: transparent;
+    font-size: 2rem;
+    color: white;
+    margin: .6rem 1.7rem 1rem 0; 
+    transition: .4s ease;
+}
+
+@media (max-width: 600px) {
+    .thumbnail {
+        width: 94%;
+        max-width: none;
+    }
+
+    .social-icons-head a {
+        font-size: 1.5rem;
+        margin: .5rem .6rem .5rem 0;
+    }
+    .social-icons a {
+        font-size: 2rem;
+        margin: .5rem .5rem .5rem 0;
+    }
+
+    .logo a img {
+        height: 75px;
+    }
+
+    nav ul li {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* Medium devices (tablets, 600px and up) */
+@media (min-width: 600px) and (max-width: 900px) {
+    .thumbnail {
+        width: 45%;
+        max-width: none;
+    }
+
+    .social-icons-head a {
+        font-size: 1.7rem;
+        margin: .5rem .6rem .5rem 0;
+    }
+
+    nav ul li {
+        font-size: 25px;
+    }
+
+    .logo a img {
+        height: 100px;
+    }
+
+
+}
+
+/* Large devices (desktops, 900px and up) */
+@media (min-width: 900px) and (max-width: 1040px){
+    .thumbnail {
+        width: 45%;
+    }
+
+    nav .nav-left {
+        justify-content: flex-start;
+    }
+
+    nav .nav-right {
+        justify-content: flex-end;
+    }
+}
+
+.contact-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 40px 70px 40px;
+    margin: 0 auto;
+    max-width: 800px;
+    font-family: serif;
+}
+
+.contact-sec p, .contact-sec h2, .contact-sec span, .contact-sec a {
+    margin: 15px 0;
+}
+.contact-sec h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.contact-sec span b {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #a8a8a8;
+}
+
+.contact-sec span a {
+    font-size: 1.35rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.contact-sec span a:hover {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+.contact-sec p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.about-sec h2 {
+    margin: 2rem 0 .7rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.about-sec {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem 14rem 6rem 14rem;
+    clear: both;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+    .about-sec {
+        padding: 2rem 10rem 2rem 10rem;
+        font-size: 1.2rem;
+    }
+    .about-sec h2 {
+        font-size: 1.4;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .about-sec {
+        padding: 2rem 7rem 2rem 7rem;
+        font-size: 1.1rem;
+    }
+    .about-sec h2 {
+        font-size: 1.3;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-sec {
+        padding: 1rem 4rem 1rem 4rem;
+        font-size: .9rem;
+    }
+    .about-sec h2 {
+        font-size: 1.2;
+    }
+}
